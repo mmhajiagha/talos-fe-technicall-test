@@ -4,14 +4,16 @@ This is a node application meant to provide an API to consume for the Talos fe t
 
 ## Install
 Just run:
+```
+npm install
 
-    `npm install`
- 
+```
 ## Run
 To start the server just run:
+```
+npm run serve
+```
 
-    `npm run serve`
-    
 The logs will show you the url to the root of the app. If not busy the server will start running on localhost:3000
 Swagger documentation should be under localhost:3000/api-docs/
     
