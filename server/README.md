@@ -6,7 +6,6 @@ This is a node application meant to provide an API to consume for the Talos fe t
 Just run:
 ```
 npm install
-
 ```
 ## Run
 To start the server just run:
