@@ -3,7 +3,6 @@
 This is a node application meant to provide an API to consume for the Talos fe technical tests
 
 ## Install
-Just run:
 ```
 npm install
 ```
