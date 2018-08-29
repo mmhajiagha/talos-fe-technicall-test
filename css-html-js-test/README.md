@@ -1,6 +1,6 @@
 # Talos html css and js test
 
-###Install
+### Install
 ```
 npm i
 ```
