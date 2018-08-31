@@ -14,7 +14,13 @@ app.use(
       'Access-Control-Allow-Headers',
       'Origin, X-Requested-With, Content-Type, Accept'
     );
-    next();
+    response.header('Access-Control-Allow-Methods', 'GET,PUT,POST');
+    if ('OPTIONS' == request.method) {
+      response.send(200);
+    }
+    else {
+      next();
+    }
   }
 );
 Server.buildServices(app);
