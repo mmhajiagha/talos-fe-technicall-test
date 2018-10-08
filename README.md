@@ -29,10 +29,8 @@ One is the button in the header the transition between the "+" and "Add new post
 ## Objective
 In the given time you have to finish as many Deliverables as you can. They should be done in order, if you don't manage to complete one of those, the progress done on it will be taken into account. 
 
-## Evaluation criteria
-TODO... :)
-
 ## Notes
+The client ask for the app to look ok in different devices and sizes including phones.
 You can add whatever library you want to. Do not reinvent the wheel.
 
 ## Api server
