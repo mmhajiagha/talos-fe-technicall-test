@@ -29,11 +29,11 @@ One is the button in the header the transition between the "+" and "Add new post
 ## Objective
 In the given time you have to finish as many Deliverables as you can. They should be done in order, if you don't manage to complete one of those, the progress done on it will be taken into account. 
 
-## Evaluation criteria
-TODO... :)
-
 ## Notes
+The client ask for the app to look ok in different devices and sizes including phones.
 You can add whatever library you want to. Do not reinvent the wheel.
+
+**You are only allowed to modified the folder of the test you were assigned to.**
 
 ## Api server
 You will need to conect the app to an api no matter what your test is (Angular, React or Html, CSS and JS). This api is provided by the project inside `./server` folder, you can run it with  ```npm run serve```. The B.E. is already populated with some post for you to do the first steps of the test. For more info please see the project readme (`./serve/README.md`).
