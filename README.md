@@ -18,7 +18,7 @@ b. When the user is in the create new post view, it should not be present.
 5. __Footer:__
     The fotter must be present in all pages however the client is not sure what is going to be there so he told us to mock a couple of paragraphs after each other as shown in the [main screen](#main-screen). Also he asked us that if the content in the application is too short the footer should remain in the bottom of the screen (sticky footer).
 ## Deliverables
-The client spects incremental functional deliverables, we agreed to do the following:
+The client expects incremental functional deliverables, we agreed to do the following:
 1. __Requirement 1 and 4__
 2. __Requirement 2.__
 3. __Animations:__
@@ -30,10 +30,10 @@ One is the button in the header the transition between the "+" and "Add new post
 In the given time you have to finish as many Deliverables as you can. They should be done in order, if you don't manage to complete one of those, the progress done on it will be taken into account. 
 
 ## Notes
-The client ask for the app to look ok in different devices and sizes including phones.
+The client asks for the app to look ok in different devices and sizes including phones.
 You can add whatever library you want to. Do not reinvent the wheel.
 
-**You are only allowed to modified the folder of the test you were assigned to.**
+**You are only allowed to modify the folder of the test you were assigned to.**
 
 **Do not open pull request**
 
