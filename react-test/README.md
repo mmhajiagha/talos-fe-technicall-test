@@ -1,8 +1,8 @@
 # Talos react test
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+This project was bootstrapped with [Create React App](https://create-react-app.dev/).
 
-You can find a guide in [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+You can find a guide in [here](https://create-react-app.dev/docs/getting-started).
 
 ### Install
 ```
