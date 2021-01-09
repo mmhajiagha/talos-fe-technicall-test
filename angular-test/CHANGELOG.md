@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/mmhajiagha/talos-fe-technical-test/compare/v0.0.2...v0.0.3) (2021-01-09)
+
+
+### Features
+
+* add common models and services libs ([4755f53](https://github.com/mmhajiagha/talos-fe-technical-test/commit/4755f53cda84b7d2e79b6b963ab41423afe16ac3))
+* add core lib ([1b5507a](https://github.com/mmhajiagha/talos-fe-technical-test/commit/1b5507abac8331860d81c915c7f53e9edaf5f6d6))
+* add translate and shared services and modules ([fc21c12](https://github.com/mmhajiagha/talos-fe-technical-test/commit/fc21c12bcb6f8054f5e48c39abe5c7ddeba3f417))
+
 ### [0.0.2](https://github.com/mmhajiagha/talos-fe-technical-test/compare/v0.0.1...v0.0.2) (2021-01-09)
 
 
