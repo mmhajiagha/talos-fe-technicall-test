@@ -7,5 +7,9 @@
   "exclude": [
     "src/test.ts",
     "**/*.spec.ts"
+  ],
+  "include": [
+    "**/*.ts",
+    "../../libs/angular-test/core/src/**/*.ts"
   ]
 }

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {NgxTranslateService} from '@angular-test/angular-test/core';
 
 @Component({
   selector: 'app-root',
@@ -6,4 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  constructor(private readonly ngxTranslateService: NgxTranslateService) {
+    this.ngxTranslateService.setup();
+  }
 }
