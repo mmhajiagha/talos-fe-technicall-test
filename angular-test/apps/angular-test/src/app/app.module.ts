@@ -4,6 +4,7 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
+import {TranslateModule} from '@ngx-translate/core';
 
 const MATERIAL_MODULES = [
   MatButtonModule
@@ -16,7 +17,9 @@ const MATERIAL_MODULES = [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    ...MATERIAL_MODULES
+    ...MATERIAL_MODULES,
+    TranslateModule.forRoot()
+
   ],
   providers: [],
   bootstrap: [AppComponent]
