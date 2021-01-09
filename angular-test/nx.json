@@ -17,6 +17,12 @@
     },
     "angular-test-core": {
       "tags": ["feature"]
+    },
+    "app-models-common": {
+      "tags": ["app-models"]
+    },
+    "app-services-common": {
+      "tags": ["app-services"]
     }
   }
 }

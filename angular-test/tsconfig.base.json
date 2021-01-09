@@ -13,7 +13,15 @@
     "typeRoots": ["node_modules/@types"],
     "lib": ["es2017", "dom"],
     "paths": {
-      "@angular-test/angular-test/core": ["libs/angular-test/core/src/index.ts"]
+      "@angular-test/angular-test/core": [
+        "libs/angular-test/core/src/index.ts"
+      ],
+      "@angular-test/app-models/common": [
+        "libs/app-models/common/src/index.ts"
+      ],
+      "@angular-test/app-services/common": [
+        "libs/app-services/common/src/index.ts"
+      ]
     },
     "rootDir": "."
   }

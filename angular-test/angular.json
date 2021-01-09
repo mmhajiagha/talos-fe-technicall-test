@@ -124,6 +124,58 @@
           }
         }
       }
+    },
+    "app-models-common": {
+      "projectType": "library",
+      "root": "libs/app-models/common",
+      "sourceRoot": "libs/app-models/common/src",
+      "prefix": "talos",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/app-models/common/tsconfig.lib.json",
+              "libs/app-models/common/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/app-models/common/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/app-models/common"],
+          "options": {
+            "jestConfig": "libs/app-models/common/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "app-services-common": {
+      "projectType": "library",
+      "root": "libs/app-services/common",
+      "sourceRoot": "libs/app-services/common/src",
+      "prefix": "talos",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/app-services/common/tsconfig.lib.json",
+              "libs/app-services/common/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/app-services/common/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/app-services/common"],
+          "options": {
+            "jestConfig": "libs/app-services/common/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "defaultProject": "angular-test",
