@@ -5,6 +5,7 @@
     "ng": "nx",
     "start": "npm run angular-test.art && ng serve",
     "build": "npm run angular-test.art && ng build",
+    "build:prod": "npm run angular-test.art && ng build --progress --prod",
     "test": "npm run angular-test.art && ng test",
     "lint": "npm run angular-test.art && nx workspace-lint && ng lint",
     "e2e": "npm run angular-test.art && ng e2e",
@@ -30,6 +31,11 @@
     "commit": "npx git-cz",
     "release": "standard-version",
     "analyze": "yarn build --stats-json && webpack-bundle-analyzer ./dist/apps/angular-test/stats.json"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run build:prod"
+    }
   },
   "private": true,
   "dependencies": {
@@ -59,6 +65,7 @@
     "@types/node": "~8.9.4",
     "commitizen": "^4.2.2",
     "cz-conventional-changelog": "^3.3.0",
+    "husky": "^3.1.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~1.7.1",
