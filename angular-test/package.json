@@ -3,11 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "nx",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "nx workspace-lint && ng lint",
-    "e2e": "ng e2e",
+    "start": "npm run angular-test.art && ng serve",
+    "build": "npm run angular-test.art && ng build",
+    "test": "npm run angular-test.art && ng test",
+    "lint": "npm run angular-test.art && nx workspace-lint && ng lint",
+    "e2e": "npm run angular-test.art && ng e2e",
     "nx": "nx",
     "affected:apps": "nx affected:apps",
     "affected:libs": "nx affected:libs",
@@ -25,7 +25,8 @@
     "dep-graph": "nx dep-graph",
     "workspace-schematic": "nx workspace-schematic",
     "help": "nx help",
-    "postinstall": "node ./decorate-angular-cli.js"
+    "postinstall": "node ./decorate-angular-cli.js",
+    "angular-test.art": "node apps/angular-test/src/angular-test-ascii-art.js"
   },
   "private": true,
   "dependencies": {
