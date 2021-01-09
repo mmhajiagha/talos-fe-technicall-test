@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.2](https://github.com/mmhajiagha/talos-fe-technical-test/compare/v0.0.1...v0.0.2) (2021-01-09)
+
+
+### Features
+
+* add commands to readme ([ef1744e](https://github.com/mmhajiagha/talos-fe-technical-test/commit/ef1744e65f297aeb2596d23133f24e3928a3446c))
+* add husky ([757f6fe](https://github.com/mmhajiagha/talos-fe-technical-test/commit/757f6fe8dd6b3719f6421b7836858660ada23e84))
+* add material and fix some dependencies versions ([b3e235c](https://github.com/mmhajiagha/talos-fe-technical-test/commit/b3e235cf7defbe325959ed7d96c55eebea970baf))
+* **add ngx-translate:** add ngx-translate ([a235511](https://github.com/mmhajiagha/talos-fe-technical-test/commit/a23551109c0534d19defc6efae17cf8232a8487f))
+
 ### 0.0.1 (2021-01-09)
 
 
