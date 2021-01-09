@@ -7,6 +7,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {AngularTestCoreModule, TranslateHttpLoaderFactory} from '@angular-test/angular-test/core';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {QuicklinkModule} from 'ngx-quicklink';
+import {AppRoutingModule} from './app.routing.module';
 
 const MATERIAL_MODULES = [
   MatButtonModule
@@ -20,6 +22,7 @@ const MATERIAL_MODULES = [
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    QuicklinkModule,
     ...MATERIAL_MODULES,
     TranslateModule.forRoot({
       loader: {
@@ -28,7 +31,8 @@ const MATERIAL_MODULES = [
         deps: [HttpClient],
       },
     }),
-    AngularTestCoreModule
+    AngularTestCoreModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

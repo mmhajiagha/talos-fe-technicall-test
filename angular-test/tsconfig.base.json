@@ -5,7 +5,7 @@
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
-    "module": "es2015",
+    "module": "esnext",
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -21,6 +21,13 @@
       ],
       "@angular-test/app-services/common": [
         "libs/app-services/common/src/index.ts"
+      ],
+      "@angular-test/angular-test/posts": [
+        "libs/angular-test/posts/src/index.ts"
+      ],
+      "@angular-test/app-models/posts": ["libs/app-models/posts/src/index.ts"],
+      "@angular-test/app-services/posts": [
+        "libs/app-services/posts/src/index.ts"
       ]
     },
     "rootDir": "."

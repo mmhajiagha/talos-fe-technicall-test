@@ -23,6 +23,15 @@
     },
     "app-services-common": {
       "tags": ["app-services"]
+    },
+    "angular-test-posts": {
+      "tags": ["feature"]
+    },
+    "app-models-posts": {
+      "tags": ["app-models"]
+    },
+    "app-services-posts": {
+      "tags": ["app-services"]
     }
   }
 }

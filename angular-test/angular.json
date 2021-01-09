@@ -176,6 +176,84 @@
           }
         }
       }
+    },
+    "angular-test-posts": {
+      "projectType": "library",
+      "root": "libs/angular-test/posts",
+      "sourceRoot": "libs/angular-test/posts/src",
+      "prefix": "talos",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/angular-test/posts/tsconfig.lib.json",
+              "libs/angular-test/posts/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/angular-test/posts/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/angular-test/posts"],
+          "options": {
+            "jestConfig": "libs/angular-test/posts/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "app-models-posts": {
+      "projectType": "library",
+      "root": "libs/app-models/posts",
+      "sourceRoot": "libs/app-models/posts/src",
+      "prefix": "talos",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/app-models/posts/tsconfig.lib.json",
+              "libs/app-models/posts/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/app-models/posts/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/app-models/posts"],
+          "options": {
+            "jestConfig": "libs/app-models/posts/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "app-services-posts": {
+      "projectType": "library",
+      "root": "libs/app-services/posts",
+      "sourceRoot": "libs/app-services/posts/src",
+      "prefix": "talos",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/app-services/posts/tsconfig.lib.json",
+              "libs/app-services/posts/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/app-services/posts/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/app-services/posts"],
+          "options": {
+            "jestConfig": "libs/app-services/posts/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "defaultProject": "angular-test",

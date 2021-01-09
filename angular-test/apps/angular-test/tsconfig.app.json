@@ -2,7 +2,8 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "outDir": "../../dist/out-tsc",
-    "types": []
+    "types": [],
+    "module": "esnext"
   },
   "exclude": [
     "src/test.ts",
@@ -10,6 +11,7 @@
   ],
   "include": [
     "**/*.ts",
-    "../../libs/angular-test/core/src/**/*.ts"
+    "../../libs/angular-test/core/src/**/*.ts",
+    "../../libs/angular-test/posts/src/**/*.ts"
   ]
 }
