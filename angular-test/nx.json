@@ -1,0 +1,19 @@
+{
+  "npmScope": "angular-test",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tslint.json": "*",
+    ".eslintrc.json": "*",
+    "nx.json": "*",
+    "tsconfig.base.json": "*"
+  },
+  "projects": {
+    "angular-test": {
+      "tags": []
+    }
+  }
+}
