@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/mmhajiagha/talos-fe-technical-test/compare/v0.0.3...v0.0.4) (2021-01-10)
+
+
+### Features
+
+* add posts(add,edit,detail) modules ([d56b0c6](https://github.com/mmhajiagha/talos-fe-technical-test/commit/d56b0c67815b233139d0695197b04dbf030eefff))
+* **a:** add toolbar and layout modules ([cca05d2](https://github.com/mmhajiagha/talos-fe-technical-test/commit/cca05d27c8533f22ba965aa0f34f75f0494015b5))
+
 ### [0.0.3](https://github.com/mmhajiagha/talos-fe-technical-test/compare/v0.0.2...v0.0.3) (2021-01-09)
 
 
