@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6](https://github.com/mmhajiagha/talos-fe-technical-test/compare/v0.0.5...v0.0.6) (2021-01-10)
+
+
+### Features
+
+* add image-upload,finish add post, add foucsIn directive ([7de3700](https://github.com/mmhajiagha/talos-fe-technical-test/commit/7de37003a82654cf7ce42769994b594e9220537b))
+
 ### [0.0.5](https://github.com/mmhajiagha/talos-fe-technical-test/compare/v0.0.4...v0.0.5) (2021-01-10)
 
 
