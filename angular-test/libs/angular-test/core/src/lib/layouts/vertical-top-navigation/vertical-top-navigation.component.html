@@ -1,0 +1,11 @@
+<div class="main">
+  <div class="vertical-top-navigation">
+    <ng-container *ngTemplateOutlet="toolbar"></ng-container>
+    <ng-content select="router-outlet"></ng-content>
+  </div>
+</div>
+
+
+<ng-template #toolbar>
+  <talos-toolbar></talos-toolbar>
+</ng-template>

@@ -4,6 +4,11 @@ import {QuicklinkStrategy} from 'ngx-quicklink';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'posts',
+    pathMatch: 'full'
+  },
+  {
     path: 'posts',
     loadChildren: () => import('@angular-test/angular-test/posts').then(m => m.AngularTestPostsModule),
     data: {},

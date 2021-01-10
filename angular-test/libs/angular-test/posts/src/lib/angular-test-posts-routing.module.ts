@@ -7,6 +7,11 @@ const routes: Routes = [{
   component: AngularTestPostsComponent,
   children: [
     {
+      path: '',
+      redirectTo: 'list',
+      pathMatch: 'full'
+    },
+    {
       path: 'list',
       loadChildren: () => import('./posts-list/posts-list.module').then(m => m.PostsListModule)
     },
