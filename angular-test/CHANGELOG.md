@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.7](https://github.com/mmhajiagha/talos-fe-technical-test/compare/v0.0.6...v0.0.7) (2021-01-10)
+
+
+### Features
+
+* **finish adding list/detail/add components:** finish adding list/add/detail components ([fbc87e5](https://github.com/mmhajiagha/talos-fe-technical-test/commit/fbc87e55309e46b14d251c0d8c62974e57d22d20))
+
 ### [0.0.6](https://github.com/mmhajiagha/talos-fe-technical-test/compare/v0.0.5...v0.0.6) (2021-01-10)
 
 
