@@ -1,13 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'talos-posts-add',
   templateUrl: './posts-detail.component.html',
-  styleUrls: ['./posts-detail.component.scss']
+  styleUrls: ['./posts-detail.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PostsDetailComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

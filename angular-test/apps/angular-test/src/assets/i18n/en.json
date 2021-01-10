@@ -1,4 +1,9 @@
 {
   "Talos": "TALOS DIGITAL",
-  "ApplicationName": "Talos Technical Test"
+  "ApplicationName": "Talos Technical Test",
+  "Common": {
+    "Buttons": {
+      "View": "View"
+    }
+  }
 }

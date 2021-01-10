@@ -1,0 +1,12 @@
+.main {
+  .vertical-top-navigation {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+
+    .body {
+      padding: 16px;
+    }
+  }
+}

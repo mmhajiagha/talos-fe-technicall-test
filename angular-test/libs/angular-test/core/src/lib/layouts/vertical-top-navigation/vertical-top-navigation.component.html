@@ -1,11 +1,18 @@
 <div class="main">
   <div class="vertical-top-navigation">
     <ng-container *ngTemplateOutlet="toolbar"></ng-container>
-    <ng-content select="router-outlet"></ng-content>
+    <div class="body">
+      <ng-content select="router-outlet"></ng-content>
+    </div>
+    <ng-container *ngTemplateOutlet="footer"></ng-container>
   </div>
 </div>
 
 
 <ng-template #toolbar>
   <talos-toolbar></talos-toolbar>
+</ng-template>
+
+<ng-template #footer>
+  <talos-footer></talos-footer>
 </ng-template>

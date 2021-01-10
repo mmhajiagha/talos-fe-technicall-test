@@ -1,0 +1,19 @@
+.mat-card-actions {
+  text-align: right;
+  border-top: 1px solid #efefef;
+  position: relative;
+}
+
+.mat-chip-list {
+  position: absolute;
+  left: -1px;
+  max-width: 211px;
+  overflow: hidden;
+  max-height: 34px;
+  top: 12px;
+  overflow: hidden;
+
+  .mat-chip {
+    font-size: 12px;
+  }
+}
