@@ -5,8 +5,8 @@ import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
-import {AngularTestCoreModule, TranslateHttpLoaderFactory} from '@angular-test/angular-test/core';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {AngularTestCoreModule, BaseUrlInterceptor, TranslateHttpLoaderFactory} from '@angular-test/angular-test/core';
+import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from '@angular/common/http';
 import {QuicklinkModule} from 'ngx-quicklink';
 import {AppRoutingModule} from './app.routing.module';
 
@@ -34,7 +34,13 @@ const MATERIAL_MODULES = [
     AngularTestCoreModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: BaseUrlInterceptor,
+      multi: true
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

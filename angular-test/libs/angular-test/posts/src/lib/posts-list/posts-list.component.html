@@ -5,34 +5,28 @@
 </div>
 <div gdGap="24px" gdColumns="repeat(auto-fill, minmax(250px, 1fr))">
   <mat-card *ngFor="let post of posts;let i=index;">
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+    <img mat-card-image [src]="post.image">
     <mat-card-content>
-      <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting.
-      </p>
+      <h4>{{post.title}}</h4>
+      <p [matTooltip]="post.description">{{post.description|shorten:98:'...'}}</p>
     </mat-card-content>
     <mat-card-actions>
       <mat-chip-list aria-label="Fish selection">
-        <mat-chip>One fish</mat-chip>
-        <mat-chip>Two fish</mat-chip>
+        <ng-container *ngFor="let tag of post.tags;let i=index;">
+          <mat-chip [matTooltip]="tag" *ngIf="i<2">{{tag|shorten:7:'...'}}</mat-chip>
+        </ng-container>
       </mat-chip-list>
-      <button mat-icon-button [matMenuTriggerFor]="menu">
+      <button mat-icon-button [matMenuTriggerFor]="menu" *ngIf="post.tags.length>2">
         <mat-icon>more_vert</mat-icon>
       </button>
       <mat-menu #menu="matMenu">
-        <button mat-menu-item>
-          <span>Two fish</span>
-        </button>
-        <button mat-menu-item disabled>
-          <span>Check voice mail</span>
-        </button>
-        <button mat-menu-item>
-          <span>Disable alerts</span>
-        </button>
+        <ng-container *ngFor="let tag of post.tags;let i=index;">
+          <button mat-menu-item *ngIf="i>=2">
+            <span>{{tag}}</span>
+          </button>
+        </ng-container>
       </mat-menu>
-      <button mat-stroked-button translate="Common.Buttons.View" [routerLink]="'/posts/'+i+'/detail'"></button>
+      <button mat-stroked-button translate="Common.Buttons.View" [routerLink]="'/posts/'+post.id+'/detail'"></button>
     </mat-card-actions>
   </mat-card>
 </div>

@@ -10,8 +10,11 @@ export const POSTS_ADD_FORM = {
     });
   },
   getPayload: (formData) => {
+    const payload = {...formData};
+    payload.photoUrl = formData.image;
+    delete formData.image;
     return {
-      ...formData,
+      ...payload,
     };
   }
 };

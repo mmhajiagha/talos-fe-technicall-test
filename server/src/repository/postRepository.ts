@@ -6,8 +6,18 @@ class PostsRepository {
   private _posts: Array<Post> = [
     new Post('321c04d0-a25f-11e8-ad0a-1d90dd5e7d7c',
       'first post in the world',
-      'this is a post description for a post with a post post',
+      'first lakjsdfl lkthis is a post description for a post with a post post',
       ['first', 'test'],
+      'images/52dcf130-a268-11e8-aec5-a13ee2174102.png'),
+      new Post('321c04d0-a25f-11e8-ad0a-1d90dd5e7d7c',
+      'second post in the world',
+      'this is a post description for a post with a post post',
+      ['second lakjlkjfirasdfasdfasdfasdfst', '2 test','3453453453452','22sdfsdfasdfasdf','tag lkjalkja'],
+      'images/52dcf130-a268-11e8-aec5-a13ee2174102.png'),
+      new Post('321c04d0-a25f-11e8-ad0a-1d90dd5e7d7c',
+      'third post in the world',
+      'this is a post description for a post with a post postthis is a post description for a post with a post postthis is a post description for a post with a post postthis is a post description for a post with a post postthis is a post description for a post with a post postthis is a post description for a post with a post post',
+      ['lk first', 'test', 'lakjsdflkjasdf', 'aaaslkjlkj'],
       'images/52dcf130-a268-11e8-aec5-a13ee2174102.png'),
   ];
 

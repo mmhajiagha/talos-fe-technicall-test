@@ -1,4 +1,7 @@
-import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, OnInit} from '@angular/core';
+import {PostsService} from '@angular-test/app-services/posts';
+import {PostModel} from '@angular-test/app-models/posts';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'talos-posts-add',
@@ -6,13 +9,25 @@ import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
   styleUrls: ['./posts-list.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class PostsListComponent implements OnInit {
-  posts = [1, 2, 3, 4, 5, 6, 7, 8, 9, 2, 3, 3, 3, 3, 3, 3, 4, 5, 2, 45, 6, 7, 7];
+export class PostsListComponent implements OnInit, OnDestroy {
+  posts: PostModel[] = [];
+  subscription: Subscription = new Subscription();
 
-  constructor() {
+  constructor(private postsService: PostsService, private cdr: ChangeDetectorRef) {
   }
 
   ngOnInit(): void {
+    this.listPosts();
   }
 
+  private listPosts() {
+    this.subscription.add(this.postsService.listPosts().subscribe(res => {
+      this.posts = res.items;
+      this.cdr.detectChanges();
+    }));
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
+  }
 }

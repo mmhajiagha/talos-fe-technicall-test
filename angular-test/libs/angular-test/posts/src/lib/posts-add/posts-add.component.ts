@@ -1,11 +1,15 @@
-import {ChangeDetectionStrategy, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {ChangeDetectionStrategy, Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {MatAutocomplete, MatAutocompleteSelectedEvent} from '@angular/material/autocomplete';
 import {MatChipInputEvent} from '@angular/material/chips';
-import {Observable} from 'rxjs';
+import {Observable, Subscription} from 'rxjs';
 import {FormControl, FormGroup} from '@angular/forms';
 import {COMMA, ENTER} from '@angular/cdk/keycodes';
 import {map, startWith} from 'rxjs/operators';
 import {POSTS_ADD_FORM} from './posts-add.form';
+import {PostModel} from '@angular-test/app-models/posts';
+import {PostsService} from '@angular-test/app-services/posts';
+import {MatSnackBar} from '@angular/material/snack-bar';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'talos-posts-add',
@@ -13,17 +17,19 @@ import {POSTS_ADD_FORM} from './posts-add.form';
   styleUrls: ['./posts-add.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class PostsAddComponent implements OnInit {
+export class PostsAddComponent implements OnInit, OnDestroy {
   @ViewChild('fruitInput') fruitInput: ElementRef<HTMLInputElement>;
   @ViewChild('auto') matAutocomplete: MatAutocomplete;
   separatorKeysCodes: number[] = [ENTER, COMMA];
   filteredTags: Observable<string[]>;
-  tags: string[] = ['Lemon'];
+  tags: string[] = [];
   allTags: string[] = ['Apple', 'Lemon', 'Lime', 'Orange', 'Strawberry'];
   addPostForm: FormGroup = POSTS_ADD_FORM.create();
   tagsCtrl = new FormControl();
+  post: PostModel = new PostModel();
+  subscription: Subscription = new Subscription();
 
-  constructor() {
+  constructor(private postsService: PostsService, private _snackBar: MatSnackBar, private router: Router) {
     this.filteredTags = this.tagsCtrl.valueChanges.pipe(
       startWith(null),
       map((fruit: string | null) => fruit ? this._filter(fruit) : this.allTags.slice()));
@@ -71,8 +77,15 @@ export class PostsAddComponent implements OnInit {
   onSubmitClick() {
     if (this.addPostForm.valid) {
       this.addPostForm.controls['tags'].setValue(this.tags);
-      console.log(POSTS_ADD_FORM.getPayload(this.addPostForm.getRawValue()));
+      this.subscription.add(this.postsService.savePost(POSTS_ADD_FORM.getPayload(this.addPostForm.getRawValue())).subscribe(res => {
+        this._snackBar.open('Post created successfully', 'Close', {duration: 3000});
+        this.router.navigateByUrl('/posts/list');
+      }));
     }
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 
 }

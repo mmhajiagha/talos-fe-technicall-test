@@ -3,6 +3,7 @@ import {TranslateModule} from '@ngx-translate/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import {NgPipesModule} from 'ngx-pipes';
 
 @NgModule({
   imports: [
@@ -10,14 +11,16 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    NgPipesModule
   ],
   exports: [
     TranslateModule,
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    NgPipesModule
   ]
 })
 export class SharedModule {

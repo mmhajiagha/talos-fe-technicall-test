@@ -17,3 +17,25 @@
     font-size: 12px;
   }
 }
+
+h4 {
+  font-weight: 500;
+}
+
+p {
+  font-size: 12px;
+  text-align: justify;
+}
+
+img {
+  max-height: 380px;
+  min-height: 380px;
+  background-color: #efefef;
+  min-width: 285px;
+}
+
+.mat-card-content {
+  max-height: 80px;
+  height: 80px;
+  overflow: hidden;
+}
