@@ -1,7 +1,6 @@
 import {NgModule} from '@angular/core';
 import {RouterModule} from '@angular/router';
 import {FooterComponent} from './footer.component';
-import {CommonModule} from '@angular/common';
 import {SharedModule} from '../../../shared.module';
 
 const MATERIAL_MODULES = [];
@@ -12,7 +11,6 @@ const MATERIAL_MODULES = [];
   ],
   imports: [
     RouterModule,
-    CommonModule,
     ...MATERIAL_MODULES,
     SharedModule
   ],

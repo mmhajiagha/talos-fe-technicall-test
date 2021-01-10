@@ -1,1 +1,62 @@
-<p>posts-add works!</p>
+<div class="page-toolbar">
+  <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px" style="margin-top: 10px;">
+    <a class="link" routerLink="/posts/list">Posts</a>
+  </div>
+</div>
+<div class="form-container">
+  <form [formGroup]="addPostForm" (submit)="onSubmitClick()">
+    <div fxLayout.gt-sm="row" fxLayout.lt-sm="column" fxLayoutAlign="start center" fxLayoutGap="36px">
+      <div fxLayout="column" fxFlex.gt-sm="50%" fxFlex.lt-sm="100%" class="left">
+
+        <mat-form-field appearance="outline">
+          <mat-label translate="posts.add.form.title"></mat-label>
+          <input matInput talosFocusIn formControlName="title">
+          <mat-error
+            *ngIf="addPostForm.controls['title'].getError('required')">
+            {{'posts.add.form.titleRequired'|translate}}
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label translate="posts.add.form.description"></mat-label>
+          <textarea matInput formControlName="description"></textarea>
+        </mat-form-field>
+
+        <mat-form-field class="example-chip-list">
+          <mat-label translate="posts.add.form.tags"></mat-label>
+          <mat-chip-list #chipList aria-label="Fruit selection">
+            <mat-chip
+              *ngFor="let tag of tags"
+              [selectable]="true"
+              [removable]="true"
+              (removed)="remove(tag)">
+              {{tag}}
+              <mat-icon matChipRemove>cancel</mat-icon>
+            </mat-chip>
+            <input
+              [placeholder]="'posts.add.form.tagsPlaceHolder'|translate"
+              #fruitInput
+              [formControl]="tagsCtrl"
+              [matAutocomplete]="auto"
+              [matChipInputFor]="chipList"
+              [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+              (matChipInputTokenEnd)="add($event)">
+          </mat-chip-list>
+          <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+            <mat-option *ngFor="let tags of filteredTags | async" [value]="tags">
+              {{tags}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+
+      </div>
+      <div fxLayout="column" fxFlex.gt-sm="50%" fxFlex.lt-sm="100%">
+        <talos-image-upload (fileSelect)="onFileSelected($event)"></talos-image-upload>
+      </div>
+    </div>
+    <div>
+      <button mat-raised-button [disabled]="!addPostForm.valid" color="primary"
+              translate="Common.Buttons.Save" type="submit"></button>
+    </div>
+  </form>
+</div>

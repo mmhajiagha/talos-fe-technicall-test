@@ -5,7 +5,7 @@ import {PostsListRoutingModule} from './posts-list-routing.module';
 import {PostsListComponent} from './posts-list.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
-import {SharedModule} from '@angular-test/angular-test/core';
+import {CreateEntityButtonModule, SharedModule} from '@angular-test/angular-test/core';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
@@ -24,7 +24,8 @@ const MATERIAL_MODULES = [
     CommonModule,
     PostsListRoutingModule,
     ...MATERIAL_MODULES,
-    SharedModule
+    SharedModule,
+    CreateEntityButtonModule
   ]
 })
 export class PostsListModule {

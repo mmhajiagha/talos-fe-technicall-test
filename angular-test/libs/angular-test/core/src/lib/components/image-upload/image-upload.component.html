@@ -1,0 +1,9 @@
+<div class="image-upload">
+  <div class="image-edit">
+    <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg, .svg" #fileInput (change)="uploadFile($event)"/>
+  </div>
+  <div class="image-preview-container">
+    <div class="image-preview" [style.backgroundImage]="'url('+ imageUrl +')'">
+    </div>
+  </div>
+</div>

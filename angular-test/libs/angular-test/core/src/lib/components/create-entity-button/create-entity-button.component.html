@@ -1,0 +1,15 @@
+<div fxHide.lt-sm fxShow>
+  <button mat-icon-button (mouseenter)="isIconButton=false;" *ngIf="isIconButton" [routerLink]="url">
+    <mat-icon>add</mat-icon>
+  </button>
+
+  <button mat-button *ngIf="!isIconButton" (mouseleave)="isIconButton=true;" [routerLink]="url">
+    {{buttonText|translate}}
+  </button>
+</div>
+
+<div fxShow.lt-sm fxHide.sm fxHide>
+  <button mat-icon-button [matTooltip]="buttonText|translate" [routerLink]="url">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>

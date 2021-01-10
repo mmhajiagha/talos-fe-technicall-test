@@ -20,7 +20,7 @@ const routes: Routes = [{
       loadChildren: () => import('./posts-add/posts-add.module').then(m => m.PostsAddModule)
     },
     {
-      path: 'detail',
+      path: ':postId/detail',
       loadChildren: () => import('./posts-detail/posts-detail.module').then(m => m.PostsDetailModule)
     }
   ]

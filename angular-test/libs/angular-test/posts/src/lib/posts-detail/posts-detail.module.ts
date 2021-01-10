@@ -1,15 +1,29 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {PostsDetailRoutingModule} from './posts-detail-routing.module';
+import {PostsDetailComponent} from './posts-detail.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import {MatChipsModule} from '@angular/material/chips';
+import {CreateEntityButtonModule, SharedModule} from '@angular-test/angular-test/core';
 
-import { PostsDetailRoutingModule } from './posts-detail-routing.module';
-import { PostsDetailComponent } from './posts-detail.component';
-
+const MATERIAL_MODULE = [
+  MatCardModule,
+  MatButtonModule,
+  MatIconModule,
+  MatChipsModule
+];
 
 @NgModule({
   declarations: [PostsDetailComponent],
   imports: [
     CommonModule,
-    PostsDetailRoutingModule
+    PostsDetailRoutingModule,
+    ...MATERIAL_MODULE,
+    SharedModule,
+    CreateEntityButtonModule
   ]
 })
-export class PostsDetailModule { }
+export class PostsDetailModule {
+}

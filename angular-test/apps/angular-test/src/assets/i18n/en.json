@@ -3,7 +3,22 @@
   "ApplicationName": "Talos Technical Test",
   "Common": {
     "Buttons": {
-      "View": "View"
+      "View": "View",
+      "Save": "Save"
+    }
+  },
+  "posts": {
+    "list": {
+      "AddNewPot": "Add a new post"
+    },
+    "add": {
+      "form": {
+        "title": "Title",
+        "titleRequired": "Title is Required",
+        "description": "Description",
+        "tags": "Tags",
+        "tagsPlaceHolder": "New tag..."
+      }
     }
   }
 }

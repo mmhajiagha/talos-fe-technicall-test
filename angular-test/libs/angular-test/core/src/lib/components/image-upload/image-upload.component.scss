@@ -1,0 +1,11 @@
+.image-upload {
+  .image-preview-container {
+    .image-preview {
+      width: 100%;
+      min-height: 250px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      max-height: 500px;
+    }
+  }
+}

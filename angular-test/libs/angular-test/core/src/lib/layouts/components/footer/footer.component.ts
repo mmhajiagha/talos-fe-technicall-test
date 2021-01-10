@@ -9,4 +9,5 @@ import {ChangeDetectionStrategy, Component, ViewEncapsulation} from '@angular/co
 })
 
 export class FooterComponent {
+  items = [1, 2, 3] ;
 }
